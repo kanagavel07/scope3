@@ -48,5 +48,5 @@ time curl -X POST http://localhost:8080/measure -d '{"rows": [{"inventoryId": "n
 To run the tests using Docker, use the following command:
 
 ```sh
-sudo dockebuild -f Dockerfile.multistage -t scope3-test:multistage --progress plain --no-cache --target run-test-stage .
+sudo docker build -f Dockerfile.multistage -t scope3-test:multistage --progress plain --no-cache --target run-test-stage .
 ```
