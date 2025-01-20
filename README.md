@@ -36,11 +36,11 @@ To test the application, you can use the following `curl` commands to send POST 
 The first request will be slow and the second request with same body will take less than 50ms
 
 ```sh
-time curl -X POST http://localhost:8080/measure -d '{"rows": [{"inventoryId": "nytimes.com","utcDatetime": "2024-12-30"},{"inventoryId": "yahoo.com","utcDatetime": "2024-12-30"}]}' -H "Content-Type: application/json"
+time curl -X POST http://localhost:8080/measure -d '{"rows": [{"inventoryId": "nytimes.com","utcDatetime": "2024-12-30", "priority": 1},{"inventoryId": "yahoo.com","utcDatetime": "2024-12-30", "priority": 1}]}' -H "Content-Type: application/json"
 ```
 
 ```sh
-time curl -X POST http://localhost:8080/measure -d '{"rows": [{"inventoryId": "nytimes.com","utcDatetime": "2024-12-30"},{"inventoryId": "yahoo.com","utcDatetime": "2024-12-30"}]}' -H "Content-Type: application/json"
+time curl -X POST http://localhost:8080/measure -d '{"rows": [{"inventoryId": "nytimes.com","utcDatetime": "2024-12-30", "priority": 1},{"inventoryId": "yahoo.com","utcDatetime": "2024-12-30", "priority": 1}]}' -H "Content-Type: application/json"
 ```
 
 ### Run Tests with Docker
